@@ -1,3 +1,5 @@
+import Layout from "../components/Layout"
+
 export default function Jsx() {
 
     const title = <h1>JSX é um conceito central</h1>
@@ -7,14 +9,16 @@ export default function Jsx() {
     }
 
     return (
-        <div>
-            {/* É usado {} para usar javascript dentro do techo do código react. */}
-            {title}
-            {subtitle()}
-            
-            <p>
-                {JSON.stringify({ nome: 'Wallace', idade: 23 })}
-            </p>
-        </div>
+
+        <Layout titulo="Entendendo o JSX">
+            <div style={{
+                backgroundColor: "blue",
+                height: "100vh"
+            }}>
+                {/* É usado {} para usar javascript dentro do techo do código react. */}
+                {title}
+                {subtitle()}
+            </div>
+        </Layout>
     )
 }
